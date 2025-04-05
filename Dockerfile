@@ -3,4 +3,4 @@ WORKDIR /app
 COPY requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
 COPY ./src/hello.py /app/hello.py
-CMD ["python","-m","flask","--app", "hello", "run"]
+CMD ["python","-m","flask","--app", "hello", "run","--host=0.0.0.0"]
