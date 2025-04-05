@@ -9,17 +9,10 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python 3.12.9
-        uses: actions/setup-python@v4
-        with:
-            python-version: 3.12.9
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-      - name: Run script
-        run: |
-          kill $(pgrep -f flask)
-          RUNNER_TRACKING_ID="" && (nohup flask --app ./src/hello run > log.txt 2>&1 &)
+          docker build -t flask-app .
+          docker run -d -p 5001:5000 flask-app
+      
         
       
