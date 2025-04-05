@@ -16,7 +16,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run script
         run: |
-          python hello.py
+          flask --app hello run
     #   - name: Run linter
     #     run: |
     #       pip install flake8
