@@ -16,6 +16,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run script
         run: |
+          kill $(pgrep -f flask)
           nohup flask --app hello run > log.txt 2>&1 &
     #   - name: Run linter
     #     run: |
