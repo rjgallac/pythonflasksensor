@@ -9,4 +9,4 @@ def hello_world():
     app.logger.info('Info level log')
     app.logger.warning('Warning level log')
 
-    return "<p>Hello, World2!</p>"
+    return "<p>Hello, World2 Develop!</p>"
