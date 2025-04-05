@@ -20,6 +20,6 @@ jobs:
       - name: Run script
         run: |
           kill $(pgrep -f flask)
-          RUNNER_TRACKING_ID="" && (nohup flask --app hello run > log.txt 2>&1 &)
+          RUNNER_TRACKING_ID="" && (nohup flask --app ./src/hello run > log.txt 2>&1 &)
         
       
