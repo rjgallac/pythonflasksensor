@@ -1,0 +1,26 @@
+name: Github Action Demo
+on: 
+  pull_request:
+    branches:
+      - develop
+jobs: 
+  lint:
+    runs-on: self-hosted
+    
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.12.9
+        uses: actions/setup-python@v4
+        with:
+            python-version: 3.12.9
+      
+      - name: Run linter
+        run: |
+          pip install flake8
+          flake8 .
+      - name: Run tests
+        run: |
+          pip install pytest
+          pytest tests/
+        
+      

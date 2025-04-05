@@ -21,13 +21,5 @@ jobs:
         run: |
           kill $(pgrep -f flask)
           RUNNER_TRACKING_ID="" && (nohup flask --app hello run > log.txt 2>&1 &)
-    #   - name: Run linter
-    #     run: |
-    #       pip install flake8
-    #       flake8 .
-    #   - name: Run tests
-    #     run: |
-    #       pip install pytest
-    #       pytest tests/
         
       
