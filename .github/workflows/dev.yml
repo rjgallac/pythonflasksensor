@@ -16,7 +16,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run script
         run: |
-          flask --app hello run
+          nohup flask --app hello run > log.txt 2>&1 &
     #   - name: Run linter
     #     run: |
     #       pip install flake8
