@@ -2,7 +2,7 @@ name: Github Action Demo
 on: 
   push:
     branches:  #Now we need to specify the branch name
-    - develop   
+    - main   
 jobs: 
   lint:
     runs-on: self-hosted
