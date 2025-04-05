@@ -1,1 +1,0 @@
-flask --app hello run 
