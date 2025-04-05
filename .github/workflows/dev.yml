@@ -1,0 +1,9 @@
+name: Github Action Demo
+on: [push]
+jobs: 
+  lint:
+    runs-on: rob-GL553VE
+    
+    steps:
+      - uses: actions/checkout@v3
+      
